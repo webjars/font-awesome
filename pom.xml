@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>font-awesome</artifactId>
-    <version>2.0.1-SNAPSHOT</version>
+    <version>3.0.0-SNAPSHOT</version>
     <name>Font Awesome</name>
     <description>WebJar for Font Awesome</description>
     <url>http://webjars.org</url>
@@ -41,8 +41,8 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>2.0.0</upstreamVersion>
-        <archiveDir>FortAwesome-Font-Awesome-83257c4</archiveDir>
+        <upstreamVersion>3.0.0</upstreamVersion>
+        <archiveDir>FortAwesome-Font-Awesome-b9f81a4</archiveDir>
         <sourceUrl>https://github.com/FortAwesome/Font-Awesome/zipball</sourceUrl>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
     </properties>
@@ -67,7 +67,7 @@
                         <goals><goal>download-single</goal></goals>
                         <configuration>
                             <url>${sourceUrl}</url>
-                            <fromFile>${upstreamVersion}</fromFile>
+                            <fromFile>v${upstreamVersion}</fromFile>
                             <toFile>${project.build.directory}/${project.artifactId}.zip</toFile>
                         </configuration>
                     </execution>
