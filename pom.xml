@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>font-awesome</artifactId>
-    <version>3.2.2-SNAPSHOT</version>
+    <version>4.0.0-SNAPSHOT</version>
     <name>Font Awesome</name>
     <description>WebJar for Font Awesome</description>
     <url>http://webjars.org</url>
@@ -41,9 +41,10 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>3.2.1</upstreamVersion>
-        <archiveDir>Font-Awesome-${upstreamVersion}</archiveDir>
-        <sourceUrl>https://github.com/FortAwesome/Font-Awesome/archive</sourceUrl>
+        <upstreamVersion>4.0.0</upstreamVersion>
+        <sourceUrl>http://fortawesome.github.io/Font-Awesome/assets</sourceUrl>
+        <archiveName>${project.artifactId}-${upstreamVersion}</archiveName>
+        <archiveFile>${archiveName}.zip</archiveFile>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
     </properties>
     
@@ -67,8 +68,8 @@
                         <goals><goal>download-single</goal></goals>
                         <configuration>
                             <url>${sourceUrl}</url>
-                            <fromFile>v${upstreamVersion}.zip</fromFile>
-                            <toFile>${project.build.directory}/dl-${project.artifactId}.zip</toFile>
+                            <fromFile>${archiveFile}</fromFile>
+                            <toDir>${project.build.directory}</toDir>
                         </configuration>
                     </execution>
                 </executions>
@@ -84,10 +85,10 @@
                         <configuration>
                             <target>
                                 <echo message="unzip archive" />
-                                <unzip src="${project.build.directory}/dl-${project.artifactId}.zip" dest="${project.build.directory}" />
+                                <unzip src="${project.build.directory}/${archiveFile}" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/${archiveDir}" includes="css/,font/,less/,scss/" />
+                                    <fileset dir="${project.build.directory}/${archiveName}"/>
                                 </move>
                             </target>
                         </configuration>
