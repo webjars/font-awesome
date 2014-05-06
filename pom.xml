@@ -113,6 +113,8 @@
                             ${project.build.directory}/classes/META-INF/resources/webjars/font-awesome/*/css/*.css
                         </include>
                     </includes>
+                    <inputFilePattern>(.*).css</inputFilePattern>
+                    <outputFilePattern>$1-jsf.css</outputFilePattern>
                     <replacements>
                         <replacement>
                             <token>url\('\.\.\/fonts\/([^?]*)\?([^']*)'</token>
