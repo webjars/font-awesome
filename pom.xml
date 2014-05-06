@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    
+
     <parent>
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>
@@ -38,7 +38,7 @@
             <email>james@jamesward.org</email>
         </developer>
     </developers>
-    
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <upstreamVersion>4.0.3</upstreamVersion>
@@ -47,7 +47,7 @@
         <archiveFile>${archiveName}.zip</archiveFile>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>org.webjars</groupId>
@@ -55,7 +55,7 @@
             <version>2.3.2</version>
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>
@@ -94,6 +94,37 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.google.code.maven-replacer-plugin</groupId>
+                <artifactId>replacer</artifactId>
+                <version>1.5.3</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>replace</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <includes>
+                        <include>
+                            ${project.build.directory}/classes/META-INF/resources/webjars/font-awesome/*/css/*.css
+                        </include>
+                    </includes>
+                    <replacements>
+                        <replacement>
+                            <token>url\('\.\.\/fonts\/([^?]*)\?([^']*)'</token>
+                            <value>url("#{resource['webjars:font-awesome/${upstreamVersion}/fonts/$1']}&amp;$2"</value>
+                        </replacement>
+                    </replacements>
+                    <regex>true</regex>
+                    <regexFlags>
+                        <regexFlag>CASE_INSENSITIVE</regexFlag>
+                    </regexFlags>
+                    <unescape>true</unescape>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
