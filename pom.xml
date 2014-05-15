@@ -28,7 +28,7 @@
         <url>http://github.com/webjars/font-awesome</url>
         <connection>scm:git:https://github.com/webjars/font-awesome.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/font-awesome.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>font-awesome-4.1.0</tag>
     </scm>
 
     <developers>
