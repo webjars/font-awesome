@@ -45,7 +45,7 @@
         <sourceUrl>http://fortawesome.github.io/Font-Awesome/assets</sourceUrl>
         <archiveName>${project.artifactId}-${upstreamVersion}</archiveName>
         <archiveFile>${archiveName}.zip</archiveFile>
-        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
+        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
         <requirejs>
             {
             }
