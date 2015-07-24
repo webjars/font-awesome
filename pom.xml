@@ -48,6 +48,18 @@
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
         <requirejs>
             {
+                "paths": {
+                    "font-awesome-jsf": "css/font-awesome-jsf",
+                    "font-awesome-jsf-min": "css/font-awesome.min-jsf",
+                    "font-awesome": "css/font-awesome",
+                    "font-awesome-min": "css/font-awesome.min",
+                    "FontAwesome-otf": "fonts/FontAwesome",
+                    "fontawesome-webfont-eot": "fonts/fontawesome-webfont",
+                    "fontawesome-webfont-svg": "fonts/fontawesome-webfont",
+                    "fontawesome-webfont-ttf": "fonts/fontawesome-webfont",
+                    "fontawesome-webfont-woff": "fonts/fontawesome-webfont",
+                    "fontawesome-webfont-woff2": "fonts/fontawesome-webfont"
+                }
             }
         </requirejs>
     </properties>
