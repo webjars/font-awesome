@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>font-awesome</artifactId>
-    <version>4.5.1-SNAPSHOT</version>
+    <version>4.6.1-SNAPSHOT</version>
     <name>Font Awesome</name>
     <description>WebJar for Font Awesome</description>
     <url>http://webjars.org</url>
@@ -41,7 +41,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>4.5.0</upstreamVersion>
+        <upstreamVersion>4.6.1</upstreamVersion>
         <sourceUrl>http://fortawesome.github.io/Font-Awesome/assets</sourceUrl>
         <archiveName>${project.artifactId}-${upstreamVersion}</archiveName>
         <archiveFile>${archiveName}.zip</archiveFile>
