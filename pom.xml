@@ -41,7 +41,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>4.6.1</upstreamVersion>
+        <upstreamVersion>4.6.2</upstreamVersion>
         <sourceUrl>http://fortawesome.github.io/Font-Awesome/assets</sourceUrl>
         <archiveName>${project.artifactId}-${upstreamVersion}</archiveName>
         <archiveFile>${archiveName}.zip</archiveFile>
