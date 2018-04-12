@@ -131,7 +131,7 @@
                 <configuration>
                     <includes>
                         <include>
-                            ${project.build.directory}/classes/META-INF/resources/webjars/font-awesome/*/css/*.css
+                            ${project.build.directory}/classes/META-INF/resources/webjars/font-awesome/${project.version}/*/css/*.css
                         </include>
                     </includes>
                     <inputFilePattern>(.*).css</inputFilePattern>
