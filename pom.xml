@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>font-awesome</artifactId>
-    <version>5.0.14-SNAPSHOT</version>
+    <version>5.0.13-1-SNAPSHOT</version>
     <name>Font Awesome</name>
     <description>WebJar for Font Awesome</description>
     <url>http://webjars.org</url>
@@ -41,8 +41,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sourceUrl>https://use.fontawesome.com/releases/v${version.unsnapshot}</sourceUrl>
-        <archiveName>fontawesome-free-${version.unsnapshot}</archiveName>
+        <sourceUrl>https://use.fontawesome.com/releases/v${version.unrevise}</sourceUrl>
+        <archiveName>fontawesome-free-${version.unrevise}</archiveName>
         <archiveFile>${archiveName}.zip</archiveFile>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
         <requirejs>
@@ -139,7 +139,7 @@
                     <replacements>
                         <replacement>
                             <token>url\(["]*\.\.\/webfonts\/([^"\?#]*)[#\?]*([^"]*)["]*\)</token>
-                            <value>url("#{resource['webjars:font-awesome/${version.unsnapshot}/webfonts/$1']}&amp;#$2")</value>
+                            <value>url("#{resource['webjars:font-awesome/${version.unrevise}/webfonts/$1']}&amp;#$2")</value>
                         </replacement>
                     </replacements>
                     <regex>true</regex>
