@@ -109,7 +109,7 @@
                                 <unzip src="${project.build.directory}/${archiveFile}" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/${archiveName}" />
+                                    <fileset dir="${project.build.directory}/${archiveName}/web-fonts-with-css" />
                                 </move>
                             </target>
                         </configuration>
@@ -131,15 +131,15 @@
                 <configuration>
                     <includes>
                         <include>
-                            ${project.build.directory}/classes/META-INF/resources/webjars/font-awesome/${project.version}/*/css/*.css
+                            ${project.build.directory}/classes/META-INF/resources/webjars/font-awesome/${project.version}/css/*.css
                         </include>
                     </includes>
                     <inputFilePattern>(.*).css</inputFilePattern>
                     <outputFilePattern>$1-jsf.css</outputFilePattern>
                     <replacements>
                         <replacement>
-                            <token>url\('\.\.\/fonts\/([^?]*)\?([^']*)'</token>
-                            <value>url("#{resource['webjars:font-awesome/${version.unsnapshot}/fonts/$1']}&amp;$2"</value>
+                            <token>url\(["]*\.\.\/webfonts\/([^"\?#]*)[#\?]*([^"]*)["]*\)</token>
+                            <value>url("#{resource['webjars:font-awesome/${version.unsnapshot}/webfonts/$1']}&amp;#$2")</value>
                         </replacement>
                     </replacements>
                     <regex>true</regex>
