@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>font-awesome</artifactId>
-    <version>5.4.2-SNAPSHOT</version>
+    <version>5.5.0-SNAPSHOT</version>
     <name>Font Awesome</name>
     <description>WebJar for Font Awesome</description>
     <url>http://webjars.org</url>
@@ -131,7 +131,7 @@
                 <configuration>
                     <includes>
                         <include>
-                            ${project.build.directory}/classes/META-INF/resources/webjars/font-awesome/${project.version}/*/css/*.css
+                            ${project.build.directory}/classes/META-INF/resources/webjars/font-awesome/${project.version}/css/*.css
                         </include>
                     </includes>
                     <inputFilePattern>(.*).css</inputFilePattern>
@@ -139,7 +139,7 @@
                     <replacements>
                         <replacement>
                             <token>url\(["]*\.\.\/webfonts\/([^"\?#]*)[#\?]*([^"]*)["]*\)</token>
-                            <value>url("#{resource['webjars:font-awesome/${project.version}/web-fonts-with-css/webfonts/$1']}&amp;#$2")</value>
+                            <value>url("#{resource['webjars:font-awesome/${project.version}/webfonts/$1']}&amp;#$2")</value>
                         </replacement>
                     </replacements>
                     <regex>true</regex>
