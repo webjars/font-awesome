@@ -139,7 +139,7 @@
                     <replacements>
                         <replacement>
                             <token>url\(["]*\.\.\/webfonts\/([^"\?#]*)[#\?]*([^"]*)["]*\)</token>
-                            <value>url("#{resource['webjars:font-awesome/${version}/web-fonts-with-css/webfonts/$1']}&amp;#$2")</value>
+                            <value>url("#{resource['webjars:font-awesome/${project.version}/web-fonts-with-css/webfonts/$1']}&amp;#$2")</value>
                         </replacement>
                     </replacements>
                     <regex>true</regex>
