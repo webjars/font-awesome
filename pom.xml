@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>font-awesome</artifactId>
-    <version>5.7.1</version>
+    <version>5.7.2-SNAPSHOT</version>
     <name>Font Awesome</name>
     <description>WebJar for Font Awesome</description>
     <url>http://webjars.org</url>
@@ -28,7 +28,7 @@
         <url>http://github.com/webjars/font-awesome</url>
         <connection>scm:git:https://github.com/webjars/font-awesome.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/font-awesome.git</developerConnection>
-        <tag>font-awesome-5.7.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <developers>
