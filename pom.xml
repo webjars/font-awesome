@@ -138,8 +138,8 @@
                     <outputFilePattern>$1-jsf.css</outputFilePattern>
                     <replacements>
                         <replacement>
-                            <token>url\(["]*\.\.\/webfonts\/([^"\?#]*)[#\?]*([^"]*)["]*\)</token>
-                            <value>url("#{resource['webjars:font-awesome/${project.version}/webfonts/$1']}&amp;#$2")</value>
+                            <token>url\((["']?)\.\.\/webfonts\/([^"?#)]*)(?:\??#([^")]*))?\1\)</token>
+                            <value>url("#{resource['webjars:font-awesome/${project.version}/webfonts/$2']}&amp;#$3")</value>
                         </replacement>
                     </replacements>
                     <regex>true</regex>
