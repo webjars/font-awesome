@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>font-awesome</artifactId>
-    <version>6.2.0</version>
+    <version>6.2.1-SNAPSHOT</version>
     <name>Font Awesome</name>
     <description>WebJar for Font Awesome</description>
     <url>http://webjars.org</url>
@@ -28,7 +28,7 @@
         <url>http://github.com/webjars/font-awesome</url>
         <connection>scm:git:https://github.com/webjars/font-awesome.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/font-awesome.git</developerConnection>
-        <tag>font-awesome-6.2.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <developers>
@@ -41,7 +41,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.build.outputTimestamp>1664386186</project.build.outputTimestamp>
+        <project.build.outputTimestamp>1664386193</project.build.outputTimestamp>
         <sourceUrl>https://github.com/FortAwesome/Font-Awesome/releases/download/${version.unrevise}</sourceUrl>
         <archiveName>fontawesome-free-${version.unrevise}-web</archiveName>
         <archiveFile>${archiveName}.zip</archiveFile>
