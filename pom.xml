@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>font-awesome</artifactId>
-    <version>6.3.1-SNAPSHOT</version>
+    <version>6.4.0-SNAPSHOT</version>
     <name>Font Awesome</name>
     <description>WebJar for Font Awesome</description>
     <url>http://webjars.org</url>
